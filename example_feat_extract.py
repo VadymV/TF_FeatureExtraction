@@ -311,6 +311,9 @@ if __name__ == "__main__":
 
     np.savetxt(args.out_features_file, dataset, delimiter=',')
     np.save
+    print("Features are written also to: {}".format(args.out_features_file))
+    print("Done.")
+
     f.close()
 
     # End: Modifications (Vadym Gryshchuk).
