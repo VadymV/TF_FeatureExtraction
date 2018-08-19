@@ -255,7 +255,8 @@ if __name__ == "__main__":
         for index_label in range(len(labels)):
 
             # Get the current label
-            label = labels[index_label].decode("utf-8").split('_')
+            splitted_path = labels[index_label].decode("utf-8").split('/')
+            label = splitted_path[len(splitted_path) - 1].split('_')
 
             # Get the features for this label
             temp = features[index_label]
