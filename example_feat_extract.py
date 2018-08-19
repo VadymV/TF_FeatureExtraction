@@ -211,13 +211,13 @@ if __name__ == "__main__":
             temp = features[index_label]
 
             # Get object's id.
-            object_id = int(str(label).split('_')[2]) - 1
+            object_id = int(label[2]) - 1
 
             # Get session's id.
-            session = int(str(label).split('_')[1])
+            session = int(label[1])
 
             # Get image's id.
-            image_id = int(str(label).split('_')[3].split('.')[0])
+            image_id = int(label[3].split('.')[0])
 
             if 0 <= object_id <= 4:
                 category = 0
