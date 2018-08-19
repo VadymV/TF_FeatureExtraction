@@ -203,7 +203,9 @@ if __name__ == "__main__":
         for index_label in range(len(labels)):
 
             # Get the current label
-            label = labels[index_label]
+            label1 = labels[index_label].decode("utf-8").split('/')
+            label2 = label1[len(label1) - 1]
+            label = label2.split('_')
 
             # Get the features for this label
             temp = features[index_label]
