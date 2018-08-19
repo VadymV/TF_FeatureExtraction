@@ -69,7 +69,7 @@ class FeatureExtractor(object):
         self._image_size = self._network_fn.default_image_size
 
         # Setup the input pipeline with a queue of filenames
-        self._filename_queue = tf.FIFOQueue(100000, [tf.string], shapes=[[]], name="filename_queue")
+        self._filename_queue = tf.FIFOQueue(1000000, [tf.string], shapes=[[]], name="filename_queue")
         self._pl_image_files = tf.placeholder(tf.string, shape=[None], name="image_file_list")
         self._enqueue_op = self._filename_queue.enqueue_many([self._pl_image_files])
         self._num_in_queue = self._filename_queue.size()

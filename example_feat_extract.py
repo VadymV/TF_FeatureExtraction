@@ -54,7 +54,7 @@ NICO_ADDITIONAL_COLUMNS = 4
 
 
 def feature_extraction_queue(feature_extractor, image_path, layer_names,
-                             batch_size, num_classes, num_images=100000):
+                             batch_size, num_classes, num_images=1000000):
     '''
     Given a directory containing images, this function extracts features
     for all images. The layers to extract features from are specified
